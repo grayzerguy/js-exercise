@@ -32,10 +32,10 @@
 
     <script>
       function calculate() {
-        num1 = document.getElementById("num1").value;
-        num2 = document.getElementById("num2").value;
-        let result = parseInt(num1) + parseInt(num2);
-        document.getElementById("result").value = parseInt(result); //parseInt ממיר למספר את הסטרינג
+        num1 = document.getElementById("num1").value; //.value;
+        num2 = document.getElementById("num2").value; //.value;
+        let result = parseFloat(num1) + parseFloat(num2);
+        document.getElementById("result").value = parseFloat(result); //parseFloat ממיר למספר את הסטרינג
       }
     </script>
   </body>
