@@ -16,6 +16,17 @@
     text-shadow: red 0 0 10px;
   }
   h3 {opacity: 1;}
+  #result {
+        opacity: 0;
+        -webkit-transition: opacity 1s ease-in;
+        -moz-transition: opacity 1s ease-in;
+        -o-transition: opacity 1s ease-in;
+        -ms-transition: opacity 1s ease-in;
+        transition: opacity 1s ease-in;
+      }
+      #result.fade {
+        opacity: 1;
+      }
 </style>
 </head>
 <body>
@@ -26,19 +37,23 @@
     <span>+</span>
     <input type="number" id="num2" />
     <span> =</span>
-    <input type="number" id="result" />
+    <input type="number" id="resultOfExrcise1" />
     <button onclick="calculate()">חשב</button>
   </div>
-  <div>
+  <div class="contener"> 
     <input type="number" id="a" name="a" placeholder="a" />
     <input type="number" id="b" name="b" placeholder="b" />
-    <input type="number" id="c" name="c" placeholder="c" />
-  x1 =
-<input type="text" id="result1" />
-   2 =
-    <input type="text" id="result2" />    
-    <button onclick="getResult()">sumbit</button>
-    <script src="test.js">
-    </script>
+    <input type="number" id="c" name="c" placeholder="c" /> 
+    <button id = "btn" onclick="getResult(), fade()">sumbit</button>
+    <script src="test.js"></script>
+  </div>
+  <div>
+    <p id="result"></p>
+    <img
+      src="https://www.yo-yoo.co.il/avodot/pics/x12.png"
+      alt="משוואה ריבועית"
+      id="img1"
+    />
+  </div>
   </body>
 </html>
