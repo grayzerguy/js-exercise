@@ -11,15 +11,14 @@ function getResult() {
     result2 = "לא קיים";
   }
   document.getElementById(
-    "result"
+    "result_2"
   ).innerHTML = `<h3>x1=${result1}, x2=${result2}</h3>`;
-  // "x1: " + result1 + ", x2: " + result2;
 }
 function fade() {
-  let result = document.getElementById("result");
-  result.classList.add("fade");
+  let result_2 = document.getElementById("result_2");
+  result_2.classList.add("fade");
 }
-function calculate() {
+function calculatePlus() {
   num1 = document.getElementById("num1").value; //.value;
   num2 = document.getElementById("num2").value; //.value;
   let result = parseFloat(num1) + parseFloat(num2);
