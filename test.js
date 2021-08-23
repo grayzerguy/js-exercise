@@ -1,7 +1,7 @@
 function getResult() {
-  var a = document.getElementById("a").value;
-  var b = document.getElementById("b").value;
-  var c = document.getElementById("c").value;
+  let a = document.getElementById("a").value;
+  let b = document.getElementById("b").value;
+  let c = document.getElementById("c").value;
   let result1 = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
   let result2 = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
   if (isNaN(result1)) {

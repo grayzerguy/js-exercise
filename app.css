@@ -9,16 +9,12 @@ h1 {
   text-shadow: red 0 0 10px;
 }
 h3 {
-    /* center */
-    text-align: center;
+  /* center */
+  text-align: center;
   opacity: 1;
 }
 #result_2 {
   opacity: 0;
-  -webkit-transition: opacity 1s ease-in;
-  -moz-transition: opacity 1s ease-in;
-  -o-transition: opacity 1s ease-in;
-  -ms-transition: opacity 1s ease-in;
   transition: opacity 1s ease-in;
 }
 #result_2.fade {
@@ -32,8 +28,7 @@ h3 {
 }
 body {
   background-color: rgb(242, 240, 240);
-
 }
 input {
-    background-color: gray;
+  background-color: gray;
 }
