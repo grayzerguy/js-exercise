@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        h3,
+        div {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            color: #333;
+            letter-spacing: 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="order" id="user">
+        <h3>user</h3>
+        <input type="text" id="fName" placeholder="שם">
+        <input type="text" id="lName" placeholder="שם משפחה">
+    </div>
+    <div class="order" id="adress">
+        <h3>adress</h3>
+        <input type="text" id="street" placeholder="רחוב">
+        <input type="number" id="number" placeholder="מספר">
+        <input type="number" id="zip" placeholder="מיקוד">
+        <select id="city">
+            <option>בחר עיר</option>
+            <option>תל אביב</option>
+            <option>פתח תקווה</option>
+            <option>חיפה</option>
+            <option>נתניה</option>
+            <option>באר שבע</option>
+        </select>
+    </div>
+    <div class="order">
+        <h3>הזמנה</h3>
+        <select id="item">
+            <option value="בחר מוצר">בחר מוצר</option>
+            <option>מזון</option>
+            <option>חומרי בנין</option>
+            <option>חומרי אופנה</option>
+        </select>
+        <input type="number" id="quantity" placeholder="כמות">
+        <input type="number" id="price">
+        <button onclick="totalPrice()">חשב</button>
+
+    </div>
+
+
+    </div>
+    <div>
+        <button id="btn" onclick="post()">הוסף</button>
+    </div>
+    <script>
+
+
+        function post() {
+            if (document.getElementById('city').value == "בחר עיר") {
+                alert("בחר עיר")
+            }
+            else {
+
+                person = {
+                    fName: document.getElementById("fName").value,
+                    lName: document.getElementById("lName").value,
+                    city: document.getElementById("city").value,
+                    street: document.getElementById("street").value,
+                    number: document.getElementById("number").value,
+                    zip: document.getElementById("zip").value,
+                    item: document.getElementById("item").value,
+                    quantity: document.getElementById("quantity").value,
+                    price: document.getElementById("price").value,
+                }
+
+                console.log(person)
+            }
+        }
+
+        let quantityRef = document.getElementById("quantity");
+        let itemRef = document.getElementById("item");
+        function totalPrice() {
+            let itemPrice;
+            if (item.value === "בחר מוצר") {
+                alert("בחר מוצר")
+            }
+            else if (item.value === "מזון") {
+                itemPrice = 10
+            } else if (item.value === "חומרי בנין") {
+                itemPrice = 20;
+            }
+            else { itemPrice = 30 }
+
+            const quantity = quantityRef.value
+            document.getElementById("price").value = itemPrice * quantity
+            console.log(price)
+
+        }
+
+
+    </script>
+</body>
+
+</html>
