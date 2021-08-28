@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="Hb">
+  <body>
+    <label for="fruit">נא להזין משקל</label><br />
+    <input type="text" id="Weight" value="0" />
+
+    <br />
+    <br />
+    <label for="fruit">בחר פרי</label><br />
+    <select name="SelFruit" id="fruits">
+      <option value="9.90">תפוחים סמית</option>
+      <option value="19.90">תפוחים פינק לידי</option>
+      <option value="14.90">תפוחים חרמון</option>
+      <option value="6.5">בננות</option>
+      <option value="4.9">אבטיח</option>
+      <option value="24.6">מנגו מאיה</option>
+    </select>
+    <br />
+    <br />
+    <br />
+    <button onclick="CalcPrice()">חשב</button>
+    <script>
+      function CalcPrice() {
+        var Weight = document.getElementById("Weight").value;
+        var FruitID = document.getElementById("fruits").value;
+
+        if (Weight === " ") {
+          alert(" חובה להזין ק''ג");
+        }
+
+        //switch(document.t)
+
+        alert(" מחיר לתשלום" + FruitID * Weight);
+      }
+    </script>
+  </body>
+</html>

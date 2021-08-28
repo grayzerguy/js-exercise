@@ -14,6 +14,7 @@ function getResult() {
     "result_2"
   ).innerHTML = `<h3>x1=${result1}, x2=${result2}</h3>`;
 }
+
 function fade() {
   let result_2 = document.getElementById("result_2");
   result_2.classList.add("fade");

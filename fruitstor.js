@@ -56,4 +56,11 @@ function logMessage() {
     default:
       console.log("No fruit selected");
   }
+
+  //restart function
+  function restart() {
+    document.getElementById("fruit").value = "";
+    document.getElementById("kg").value = "";
+    document.getElementById("sum").innerHTML = "";
+  }
 }
